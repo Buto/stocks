@@ -8,6 +8,7 @@ import { StocksService      } from './services/stocks.service';
 // import the App component
 import { AppComponent } from './app.component';
 import { SummaryComponent } from './components/summary/summary.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 // use the NgModule notation to define a module by passing an object
 @NgModule({
@@ -15,7 +16,8 @@ import { SummaryComponent } from './components/summary/summary.component';
   // declarations are to list any components and directives used in the app
   declarations: [
     AppComponent,
-    SummaryComponent
+    SummaryComponent,
+    DashboardComponent
   ],
 
   // imports are othre modules that are used in the app
