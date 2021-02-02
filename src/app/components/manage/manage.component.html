@@ -1,0 +1,40 @@
+<!-- <div class="mdl-grid"> -->
+<div class="demo-grid-1 mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col"></div>
+    <div class="mdl-cell mdl-cell--4-col">
+        <form style="margin-bottom: 5px;" (submit)="add()">
+              <!-- bind the submit event to call the add method -->
+             <!--  two-way binding for the symbol input box-->
+             <input name="stock"
+                    [(ngModel)]="stock"
+                    class="mdl-textfield__input"
+                    type="text"
+                    placeholder="Add Stock" />
+        </form>
+        <table  class="mdl-data-table mdl-data-table--selectable mdl-shadow--2dp"
+                style="width: 100%;" >
+            <tbody>
+                <!-- ngFor iterates symbol collection -->
+                <tr *ngFor="let symbol of symbols">
+                   <!-- display the symbol -->
+                   <td class="mdl-data-table__cell--non-numeric">{{symbol}}</td>
+                   <td style="padding-top: 6px;">
+                        <!-- bind the button click event to the remove method -->
+                        <button class="mdl-button" (click)="remove(symbol)">Remove</button>
+                   </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col"></div>
+</div>
+
+
+
+
+
+<!--<p>                -->
+<!--  manage works!    -->
+<!--</p>               -->
+
+
